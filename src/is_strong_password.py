@@ -12,7 +12,7 @@ class IsStrongPassword():
   def __thereIsUnderscore(self, password):
     return any(map(lambda char: char == '_', password))
 
-  def apply(self, password: str):
+  def check(self, password: str):
     return (
       len(password) >= 6 and
       self.__thereIsUpperCaseLetter(password) and
