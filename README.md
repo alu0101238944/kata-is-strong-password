@@ -1,4 +1,4 @@
 
-# Kata Is Strong Password
+# Kata Is Strong Password - Python
 
-En las diferentes ramas de este repositorio se podrán encontrar las implementaciones realizadas de la Kata Is Strong Password.
+En este repositorio se podrá encontrar las implementación realizada de la Kata Is Strong Password en Python.
