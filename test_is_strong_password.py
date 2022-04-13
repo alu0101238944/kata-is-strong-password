@@ -21,6 +21,9 @@ class IsStrongPasswordTest(unittest.TestCase):
   def test_password_must_have_at_least_one_digit(self):
     self.assertEqual(self.is_strong_password.apply('ABabc_'), False)
 
+  def test_password_must_have_at_least_one_underscore(self):
+    self.assertEqual(self.is_strong_password.apply('ABabc1'), False)
+
 
 if __name__ == '__main__':
   unittest.main()
