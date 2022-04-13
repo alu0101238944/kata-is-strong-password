@@ -1,16 +1,19 @@
 
 import unittest
-from src.is_strong_password import is_strong_password
+from src.is_strong_password import IsStrongPassword
 
 class IsStrongPasswordTest(unittest.TestCase):
+  def setUp(self):
+    self.is_strong_password = IsStrongPassword()
+
   def test_strong_password_return_true(self):
-    self.assertEqual(is_strong_password('ABab_1'), True)
+    self.assertEqual(self.is_strong_password.apply('ABab_1'), True)
 
   def test_password_must_have_at_least_six_characters(self):
-    self.assertEqual(is_strong_password('Aab1_'), False)
+    self.assertEqual(self.is_strong_password.apply('Aab1_'), False)
 
   def test_password_must_have_at_least_one_uppercase_letter(self):
-    self.assertEqual(is_strong_password('abcd_1'), False)
+    self.assertEqual(self.is_strong_password.apply('abcd_1'), False)
 
 
 if __name__ == '__main__':
