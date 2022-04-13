@@ -9,10 +9,14 @@ class IsStrongPassword():
   def __thereIsDigit(self, password):
     return any(map(lambda char: char.isdigit(), password))
 
+  def __thereIsUnderscore(self, password):
+    return any(map(lambda char: char == '_', password))
+
   def apply(self, password: str):
     return (
       len(password) >= 6 and
       self.__thereIsUpperCaseLetter(password) and
       self.__thereIsLowerCaseLetter(password) and 
-      self.__thereIsDigit(password)
+      self.__thereIsDigit(password) and 
+      self.__thereIsUnderscore(password)
     )
