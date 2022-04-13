@@ -1,3 +1,3 @@
 
 def is_strong_password(password: str):
-  return True
+  return len(password) >= 6
