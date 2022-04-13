@@ -7,12 +7,11 @@ class IsStrongPasswordTest(unittest.TestCase):
     self.assertEqual(is_strong_password('ABab_1'), True)
 
   def test_password_must_have_at_least_six_characters(self):
-    self.assertEqual(is_strong_password(''), False)
-    self.assertEqual(is_strong_password('A'), False)
-    self.assertEqual(is_strong_password('Aa'), False)
-    self.assertEqual(is_strong_password('Aa1'), False)
-    self.assertEqual(is_strong_password('Aa1_'), False)
-    self.assertEqual(is_strong_password('Aa1_b'), False)
+    self.assertEqual(is_strong_password('Aab1_'), False)
+
+  def test_password_must_have_at_least_one_uppercase_letter(self):
+    self.assertEqual(is_strong_password('abcd_1'), False)
+
 
 if __name__ == '__main__':
   unittest.main()
