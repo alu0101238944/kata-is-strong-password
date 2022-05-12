@@ -26,4 +26,5 @@ isStrongPasswordTests = describe "IsStrongPassword behaviour" $ do
   it "A password without a number shouldn't be accepted" $ do
     isStrongPassword "Ab_def" `shouldBe` False
 
-  
+  it "A password without an upper case letter shouldn't be accepted" $ do
+    isStrongPassword "ab_2ef" `shouldBe` False
