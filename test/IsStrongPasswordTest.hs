@@ -20,4 +20,7 @@ isStrongPasswordTests = describe "IsStrongPassword behaviour" $ do
   it "A strong password should be accepted" $ do
     isStrongPassword "Ab_2ef" `shouldBe` True
 
+  it "A password with less than 6 characters shouldn't be accepted" $ do
+    isStrongPassword "Ab_2e" `shouldBe` False
+
   

@@ -1,4 +1,4 @@
 module IsStrongPassword where
 
 isStrongPassword :: String -> Bool
-isStrongPassword s = True
+isStrongPassword s = length s >= 6 
