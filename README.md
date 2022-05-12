@@ -1,4 +1,4 @@
 
-# Kata Is Strong Password
+# Kata Is Strong Password (Haskell)
 
-En las diferentes ramas de este repositorio se podrán encontrar las implementaciones realizadas de la Kata Is Strong Password.
+En esta rama del repositorio se podrá encontrar la implementación en Haskell realizada de la Kata Is Strong Password.
