@@ -8,3 +8,4 @@ isStrongPassword s =
     && any Char.isDigit s
     && any Char.isUpper s
     && any Char.isLower s
+    && elem '_' s
