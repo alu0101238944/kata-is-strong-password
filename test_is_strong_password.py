@@ -6,7 +6,7 @@ class IsStrongPasswordTest(unittest.TestCase):
   def setUp(self):
     self.is_strong_password = IsStrongPassword()
 
-  def test_strong_password_return_true(self):
+  def test_strong_password_is_valid(self):
     self.assertEqual(self.is_strong_password.check('ABab_1'), True)
 
   def test_password_must_have_at_least_six_characters(self):
